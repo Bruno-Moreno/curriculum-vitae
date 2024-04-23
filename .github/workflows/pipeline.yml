@@ -3,7 +3,7 @@ name: Compile LaTeX and upload PDF
 on:
   push:
     branches:
-      - main  # o el nombre de tu rama principal
+      - main 
 
 jobs:
   build:
@@ -16,13 +16,13 @@ jobs:
     - name: Compile LaTeX
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: main.tex  # Reemplaza 'main.tex' con el nombre de tu archivo principal .tex
+        root_file: main.tex  # Name of the Tex File
 
-    - name: Upload PDF
+    - name: Upload PDF to Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: compiled-pdf
-        path: main.pdf  # Reemplaza 'main.pdf' con el nombre de tu archivo PDF compilado
+        path: main.pdf  # Name of the Tex File
 
     - name: Commit and push compiled PDF
       run: |
