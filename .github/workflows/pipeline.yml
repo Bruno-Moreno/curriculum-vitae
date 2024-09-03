@@ -16,7 +16,7 @@ jobs:
     - name: Compile LaTeX
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: main.tex  # Name of the Tex File
+        root_file: Nelson_Moreno_CV.tex  # Name of the Tex File
 
     - name: Upload PDF to Artifacts
       uses: actions/upload-artifact@v2
