@@ -22,12 +22,12 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: compiled-pdf
-        path: main.pdf  # Name of the Tex File
+        path: Nelson_Moreno_CV.pdf  # Name of the Tex File
 
     - name: Commit and push compiled PDF
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add main.pdf
+        git add Nelson_Moreno_CV.pdf
         git commit -m "Auto-commit: Compiled PDF"
         git push
